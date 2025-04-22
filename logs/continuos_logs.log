@@ -25,3 +25,106 @@
 [2025-04-20 11:54:28,747: INFO: common: created directory at: artifacts]
 [2025-04-20 11:54:28,747: INFO: common: created directory at: artifacts/data_transformation]
 [2025-04-20 11:54:35,521: INFO: main: Stage Data Transformation stage Completed]
+[2025-04-22 12:33:18,290: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-22 12:33:19,456: INFO: main: stage Data Ingestion stage initiated]
+[2025-04-22 12:33:19,456: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 12:33:19,456: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 12:33:19,456: INFO: common: created directory at: artifacts]
+[2025-04-22 12:33:19,456: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-22 12:33:19,456: INFO: data_ingestion: File already exits]
+[2025-04-22 12:33:19,556: INFO: main: Stage Data Ingestion stage Completed]
+[2025-04-22 12:33:19,556: INFO: main: stage Data Transformation stage initiated]
+[2025-04-22 12:33:19,556: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 12:33:19,556: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 12:33:19,556: INFO: common: created directory at: artifacts]
+[2025-04-22 12:33:19,556: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-22 12:33:20,890: INFO: main: Stage Data Transformation stage Completed]
+[2025-04-22 12:33:20,890: INFO: main: stage Model Trainer stage initiated]
+[2025-04-22 12:33:20,892: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 12:33:20,892: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 12:33:20,895: INFO: common: created directory at: artifacts]
+[2025-04-22 12:33:20,895: ERROR: main: 'ConfigurationManager' object has no attribute 'params']
+Traceback (most recent call last):
+  File "C:\Projects\TextSummarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\Projects\TextSummarizer\src\textSummarizer\config\configuration.py", line 44, in get_model_trainer_config
+    params=self.params.TrainingArguments
+AttributeError: 'ConfigurationManager' object has no attribute 'params'
+[2025-04-22 12:35:16,665: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-22 12:35:17,724: INFO: main: stage Data Ingestion stage initiated]
+[2025-04-22 12:35:17,733: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 12:35:17,733: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 12:35:17,733: INFO: common: created directory at: artifacts]
+[2025-04-22 12:35:17,733: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-22 12:35:17,733: INFO: data_ingestion: File already exits]
+[2025-04-22 12:35:17,814: INFO: main: Stage Data Ingestion stage Completed]
+[2025-04-22 12:35:17,814: INFO: main: stage Data Transformation stage initiated]
+[2025-04-22 12:35:17,814: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 12:35:17,830: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 12:35:17,830: INFO: common: created directory at: artifacts]
+[2025-04-22 12:35:17,830: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-22 12:35:19,067: INFO: main: Stage Data Transformation stage Completed]
+[2025-04-22 12:35:19,068: INFO: main: stage Model Trainer stage initiated]
+[2025-04-22 12:35:19,070: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 12:35:19,072: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 12:35:19,072: INFO: common: created directory at: artifacts]
+[2025-04-22 12:35:19,073: INFO: common: created directory at: artifacts/model_trainer]
+[2025-04-22 12:41:21,331: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\Projects\TextSummarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\Projects\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-04-22 13:06:28,346: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-22 13:06:29,911: INFO: main: stage Data Ingestion stage initiated]
+[2025-04-22 13:06:29,914: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 13:06:29,915: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 13:06:29,915: INFO: common: created directory at: artifacts]
+[2025-04-22 13:06:29,916: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-22 13:06:29,916: INFO: data_ingestion: File already exits]
+[2025-04-22 13:06:30,006: INFO: main: Stage Data Ingestion stage Completed]
+[2025-04-22 13:06:30,006: INFO: main: stage Data Transformation stage initiated]
+[2025-04-22 13:06:30,006: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 13:06:30,006: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 13:06:30,006: INFO: common: created directory at: artifacts]
+[2025-04-22 13:06:30,006: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-22 13:06:31,332: INFO: main: Stage Data Transformation stage Completed]
+[2025-04-22 13:06:31,333: INFO: main: stage Model Trainer stage initiated]
+[2025-04-22 13:06:31,334: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 13:06:31,336: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 13:06:31,337: INFO: common: created directory at: artifacts]
+[2025-04-22 13:06:31,337: INFO: common: created directory at: artifacts/model_trainer]
+[2025-04-22 13:06:38,392: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\Projects\TextSummarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "C:\Projects\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-04-22 14:46:54,423: INFO: config: PyTorch version 2.6.0 available.]
+[2025-04-22 14:46:55,599: INFO: main: stage Data Ingestion stage initiated]
+[2025-04-22 14:46:55,614: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 14:46:55,614: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 14:46:55,614: INFO: common: created directory at: artifacts]
+[2025-04-22 14:46:55,614: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-22 14:46:55,614: INFO: data_ingestion: File already exits]
+[2025-04-22 14:46:55,698: INFO: main: Stage Data Ingestion stage Completed]
+[2025-04-22 14:46:55,698: INFO: main: stage Data Transformation stage initiated]
+[2025-04-22 14:46:55,698: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 14:46:55,698: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 14:46:55,698: INFO: common: created directory at: artifacts]
+[2025-04-22 14:46:55,698: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-22 14:46:56,874: INFO: main: Stage Data Transformation stage Completed]
+[2025-04-22 14:46:56,874: INFO: main: stage Model Trainer stage initiated]
+[2025-04-22 14:46:56,874: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-04-22 14:46:56,874: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-22 14:46:56,874: INFO: common: created directory at: artifacts]
+[2025-04-22 14:46:56,874: INFO: common: created directory at: artifacts/model_trainer]
+[2025-04-22 16:15:14,852: INFO: main: Stage Model Trainer stage Completed]

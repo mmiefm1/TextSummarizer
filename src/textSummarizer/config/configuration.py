@@ -41,7 +41,7 @@ class ConfigurationManager:
     
     def get_model_trainer_config(self) -> ModelTrainerConfig:
         config=self.config.model_trainer
-        params=self.params.TrainingArguments
+        params=self.paramss.TrainingArguments
 
         create_directories([config.root_dir])
 
