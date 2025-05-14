@@ -128,3 +128,118 @@ TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'eval
 [2025-04-22 14:46:56,874: INFO: common: created directory at: artifacts]
 [2025-04-22 14:46:56,874: INFO: common: created directory at: artifacts/model_trainer]
 [2025-04-22 16:15:14,852: INFO: main: Stage Model Trainer stage Completed]
+[2025-05-14 11:52:25,272: INFO: server: Started server process [7120]]
+[2025-05-14 11:52:25,272: INFO: on: Waiting for application startup.]
+[2025-05-14 11:52:25,272: INFO: on: Application startup complete.]
+[2025-05-14 11:52:25,288: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-05-14 12:00:27,469: INFO: utils: Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2025-05-14 12:00:27,473: INFO: utils: NumExpr defaulting to 8 threads.]
+[2025-05-14 12:00:28,680: INFO: config: PyTorch version 2.6.0 available.]
+[2025-05-14 12:00:35,123: INFO: main: stage Data Ingestion stage initiated]
+[2025-05-14 12:00:35,131: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-14 12:00:35,136: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-14 12:00:35,139: INFO: common: created directory at: artifacts]
+[2025-05-14 12:00:35,140: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-05-14 12:00:35,141: INFO: data_ingestion: File already exits]
+[2025-05-14 12:00:35,476: INFO: main: Stage Data Ingestion stage Completed]
+[2025-05-14 12:00:35,476: INFO: main: stage Data Transformation stage initiated]
+[2025-05-14 12:00:35,492: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-14 12:00:35,503: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-14 12:00:35,508: INFO: common: created directory at: artifacts]
+[2025-05-14 12:00:35,509: INFO: common: created directory at: artifacts/data_transformation]
+[2025-05-14 12:00:38,416: INFO: main: Stage Data Transformation stage Completed]
+[2025-05-14 12:00:38,416: INFO: main: stage Model Trainer stage initiated]
+[2025-05-14 12:00:38,425: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-14 12:00:38,432: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-14 12:00:38,439: INFO: common: created directory at: artifacts]
+[2025-05-14 12:00:38,441: INFO: common: created directory at: artifacts/model_trainer]
+[2025-05-14 12:00:38,441: ERROR: main: "'ConfigBox' object has no attribute 'evaluation_strategy'"]
+Traceback (most recent call last):
+  File "C:\anaconda3\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'evaluation_strategy'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\anaconda3\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'evaluation_strategy'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\anaconda3\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'evaluation_strategy'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\anaconda3\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'evaluation_strategy'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\anaconda3\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'evaluation_strategy'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\anaconda3\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'evaluation_strategy'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\anaconda3\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'evaluation_strategy'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Projects\TextSummarizer\main.py", line 34, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\TextSummarizer\src\textSummarizer\config\configuration.py", line 57, in get_model_trainer_config
+    evaluation_strategy = params.evaluation_strategy,
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\anaconda3\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'evaluation_strategy'"
+[2025-05-14 12:01:40,385: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-14 12:01:40,385: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-14 12:01:40,385: INFO: common: created directory at: artifacts]
+[2025-05-14 12:01:40,385: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-05-14 12:56:44,785: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-14 12:56:44,785: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-14 12:56:44,785: INFO: common: created directory at: artifacts]
+[2025-05-14 12:56:44,785: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-05-14 12:59:46,684: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-14 12:59:46,688: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-14 12:59:46,689: INFO: common: created directory at: artifacts]
+[2025-05-14 12:59:46,690: INFO: common: created directory at: artifacts/model_evaluation]
