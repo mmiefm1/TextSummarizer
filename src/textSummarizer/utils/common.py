@@ -1,5 +1,5 @@
 import os
-from box.exceptions import BoxValueError
+from box import BoxValueError
 import yaml
 from src.textSummarizer.logging import logger
 # from ensure import ensure_annotations
