@@ -243,3 +243,7 @@ box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'evaluation_str
 [2025-05-14 12:59:46,688: INFO: common: yaml file: params.yaml loaded successfully]
 [2025-05-14 12:59:46,689: INFO: common: created directory at: artifacts]
 [2025-05-14 12:59:46,690: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-05-14 14:21:18,410: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-05-14 14:21:18,414: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-05-14 14:21:18,416: INFO: common: created directory at: artifacts]
+[2025-05-14 14:21:18,417: INFO: common: created directory at: artifacts/model_evaluation]
